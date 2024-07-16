@@ -56,3 +56,10 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Important Notice
+
+Please note that this software has not been signed yet, so your antivirus or Windows might flag it. I plan to have it signed in future releases, but I'm currently not familiar with the process.
+
+If you share this software, please credit Benny Cohen.
+
