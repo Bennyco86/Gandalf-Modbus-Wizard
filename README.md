@@ -32,7 +32,7 @@ The Gandalf Modbus Wizard is a comprehensive tool designed to facilitate working
 ## User Guides
 
 ### Modbus TCP Scanner
-![Modbus TCP Scanner](https://github.com/username/repository/blob/main/images/modbus_tcp_scanner.png)
+![Modbus TCP Scanner](https://github.com/Bennyco86/repository/blob/main/images/modbus_tcp_scanner.png)
 
 1. **Host Selection:**
    - *Localhost*: For simulated values from Modsim.
@@ -52,7 +52,7 @@ The Gandalf Modbus Wizard is a comprehensive tool designed to facilitate working
 10. **Format Buttons:** Toggle display format.
 
 ### Auto Detection Wizard
-![Auto Detection Wizard](https://github.com/username/repository/blob/main/images/auto_detection_wizard.png)
+![Auto Detection Wizard](https://github.com/Bennyco86/repository/blob/main/images/auto_detection_wizard.png)
 
 1. **COM Port:** Select from dropdown.
 2. **Start Device ID / End Device ID:** Define slave ID range.
@@ -70,7 +70,7 @@ The Gandalf Modbus Wizard is a comprehensive tool designed to facilitate working
 10. **Progress & Current Settings:** Display during scan.
 
 ### Modbus RTU Scanner
-![Modbus RTU Scanner](https://github.com/username/repository/blob/main/images/modbus_rtu_scanner.png)
+![Modbus RTU Scanner](https://github.com/Bennyco86/repository/blob/main/images/modbus_rtu_scanner.png)
 
 1. **COM Port:** Select from dropdown.
 2. **Baud Rate:** Choose from predefined or custom.
@@ -99,4 +99,4 @@ The Gandalf Modbus Wizard was created to provide a user-friendly and robust tool
 To include images in your README, upload the images to your GitHub repository and link them using the following format:
 
 ```markdown
-![Image Description](https://github.com/username/repository/blob/main/path_to_image.png)
+![Image Description](https://github.com/Bennyco86/repository/blob/main/path_to_image.png)
