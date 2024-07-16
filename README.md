@@ -40,7 +40,7 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 
 ## Getting Started
 
-1. **Download the Tool**: Get the latest version from the [software folder](https://your-link-here).
+1. **Download the Tool**: Get the latest version from the [software folder]([https://your-link-here](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software)).
 2. **Run the Executable**: Extract the ZIP file and run `modbuswizard.exe`.
 3. **Read the Documentation**: Refer to the included `README.md` for detailed usage instructions.
 
@@ -55,11 +55,10 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of co
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Gandalf Modbus Wizard License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Important Notice
 
 Please note that this software has not been signed yet, so your antivirus or Windows might flag it. I plan to have it signed in future releases, but I'm currently not familiar with the process.
 
 If you share this software, please credit Benny Cohen.
-
