@@ -40,7 +40,7 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 
 ## Getting Started
 
-1. **Download the Tool**: Get the latest version from the [software folder]([https://your-link-here](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software).
+1. **Download the Tool**: Get the latest version from the [software folder](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software).
 2. **Run the Executable**: Extract the ZIP file and run `modbuswizard.exe`.
 3. **Read the Documentation**: Refer to the included `README.md` for detailed usage instructions.
 
