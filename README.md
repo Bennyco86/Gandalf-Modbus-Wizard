@@ -14,7 +14,7 @@ This tool allows you to connect to a Modbus TCP device, read the registers, and 
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
 
-![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20TCP%20scanner.PNG)
+![Modbus TCP Scanner](https://github.com/bennyco86/YourRepositoryName/raw/main/Modbus%20TCP%20scanner.PNG)
 
 ### Auto Detection Wizard
 This feature helps automatically detect the correct connection settings for your Modbus RTU device.
@@ -24,7 +24,7 @@ This feature helps automatically detect the correct connection settings for your
 - **Baud Rates, Parities, Data Bits, and Stop Bits**: Adjust these settings to match your device.
 - **Register Type and Range**: Choose the register type and range to scan.
 
-![Auto Detection Wizard](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Gandalf.PNG)
+![Auto Detection Wizard](https://github.com/bennyco86/YourRepositoryName/raw/main/Gandalf.PNG)
 
 ### Modbus RTU Scanner
 After establishing a connection with the Auto Detection Wizard, use this tool to scan and read the registers of your Modbus RTU device.
@@ -36,13 +36,18 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
 
-![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
+![Modbus RTU Scanner](https://github.com/bennyco86/YourRepositoryName/raw/main/Modbus%20RTU%20scanner.PNG)
 
 ## Getting Started
 
 1. **Download the Tool**: Get the latest version from the [software folder](https://your-link-here).
 2. **Run the Executable**: Extract the ZIP file and run `modbuswizard.exe`.
 3. **Read the Documentation**: Refer to the included `README.md` for detailed usage instructions.
+
+## Support
+
+This program took me a long time to develop. If you like it, I'd appreciate your support!  
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 ## Contributing
 
