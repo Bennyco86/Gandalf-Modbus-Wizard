@@ -14,7 +14,7 @@ This tool allows you to connect to a Modbus TCP device, read the registers, and 
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
 
-![Modbus TCP Scanner](https://github.com/bennyco86/YourRepositoryName/raw/main/Modbus%20TCP%20scanner.PNG)
+![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20TCP%20scanner.PNG)
 
 ### Auto Detection Wizard
 This feature helps automatically detect the correct connection settings for your Modbus RTU device.
@@ -24,7 +24,7 @@ This feature helps automatically detect the correct connection settings for your
 - **Baud Rates, Parities, Data Bits, and Stop Bits**: Adjust these settings to match your device.
 - **Register Type and Range**: Choose the register type and range to scan.
 
-![Auto Detection Wizard](https://github.com/bennyco86/YourRepositoryName/raw/main/Gandalf.PNG)
+![Auto Detection Wizard](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Gandalf.PNG)
 
 ### Modbus RTU Scanner
 After establishing a connection with the Auto Detection Wizard, use this tool to scan and read the registers of your Modbus RTU device.
@@ -36,7 +36,7 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
 
-![Modbus RTU Scanner](https://github.com/bennyco86/YourRepositoryName/raw/main/Modbus%20RTU%20scanner.PNG)
+![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
 
 ## Getting Started
 
