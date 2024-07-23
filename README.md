@@ -49,7 +49,7 @@ This feature allows you to simulate Modbus TCP and RTU devices.
 - **Address Start/End**: Specify the address range to simulate.
 - **Device ID**: Enter the Modbus device ID.
 
-![Modbus Simulation](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20Simulation.PNG)
+![Modbus Simulation](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Simulation.PNG)
 
 ## Getting Started
 
