@@ -38,6 +38,19 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 
 ![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
 
+
+### Modbus Simulation
+This feature allows you to simulate Modbus TCP and RTU devices.
+
+- **Simulation Type**: Choose between TCP or RTU.
+- **Host/Port**: For TCP simulation.
+- **COM Port/Baudrate/Stop Bits/Parity/Data Bits**: For RTU simulation.
+- **Function Code**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
+- **Address Start/End**: Specify the address range to simulate.
+- **Device ID**: Enter the Modbus device ID.
+
+![Modbus Simulation](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20Simulation.PNG)
+
 ## Getting Started
 
 1. **Download the Tool**: Get the latest version from the [software folder](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software).
