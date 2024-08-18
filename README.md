@@ -1,3 +1,4 @@
+
 # Gandalf Modbus Wizard
 
 Gandalf Modbus Wizard is a comprehensive tool designed to facilitate the scanning and troubleshooting of Modbus TCP and Modbus RTU devices. It includes three main features: Modbus TCP Scanner, Auto Detection Wizard, and Modbus RTU Scanner.
@@ -13,8 +14,10 @@ This tool allows you to connect to a Modbus TCP device, read the registers, and 
 - **Device ID**: Enter the Modbus device ID.
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
+- **Combine Registers**: Combine two consecutive registers in normal or reverse order.
+- **Write Registers**: Write values directly to specified registers.
 
-![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20TCP%20scanner.PNG)
+![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20normal.PNG)
 
 ### Auto Detection Wizard
 This feature helps automatically detect the correct connection settings for your Modbus RTU device.
@@ -35,9 +38,10 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 - **Device ID**: Enter the Modbus device ID.
 - **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
 - **Polling Rate**: Adjust the rate in milliseconds.
+- **Combine Registers**: Combine two consecutive registers in normal or reverse order.
+- **Write Registers**: Write values directly to specified registers.
 
-![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
-
+![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.png)
 
 ### Modbus Simulation
 This feature allows you to simulate Modbus TCP and RTU devices.
@@ -50,6 +54,15 @@ This feature allows you to simulate Modbus TCP and RTU devices.
 - **Device ID**: Enter the Modbus device ID.
 
 ![Modbus Simulation](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Simulation.PNG)
+
+## Recent Updates in v1.2
+- **Enable Write Registers**: Added the ability to write values to specific registers in both Modbus TCP and Modbus RTU Scanners.
+- **Combine Consecutive Registers**: Users can now combine two consecutive registers in either normal or reversed order for both Modbus TCP and RTU Scanners.
+
+![Combined Registers - Normal](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20normal.PNG)
+![Combined Registers - Reverse](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse.PNG)
+![Modbus RTU Combined Registers - Normal](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.png)
+![Modbus RTU Combined Registers - Reverse](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse%20rtu.png)
 
 ## Getting Started
 
