@@ -44,8 +44,8 @@ After establishing a connection with the Auto Detection Wizard, use this tool to
 - **Write Registers**: Directly write to registers from the scanner interface.
 
 ![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
-![Combined Normal RTU](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.PNG)
-![Combined Reverse RTU](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse%20rtu.PNG)
+![Modbus RTU Combined Registers - Normal](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.png)
+![Modbus RTU Combined Registers - Reverse](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse%20rtu.png)
 
 ### Modbus Simulation
 This feature allows you to simulate Modbus TCP and RTU devices.
