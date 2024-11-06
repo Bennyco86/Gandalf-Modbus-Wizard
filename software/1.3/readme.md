@@ -29,8 +29,4 @@ Gandalf Modbus Wizard is a powerful tool for scanning and interacting with Modbu
 - Allows real-time register value display in Decimal, Binary, Hexadecimal, Float, and Double formats.
 - Provides an option to download scan logs for analysis and troubleshooting.
 
-## Installation
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/GandalfModbusWizard.git
