@@ -48,8 +48,6 @@ Export your scanned register data directly to **CSV** for reporting or further a
 * **Tkinter** (UI)
 * **Pymodbus** (Protocol handling)
 
-## 📄 License
-This project is open-source. Feel free to contribute or fork the repository!
 
 ---
-*Created by [Bennyco86](https://github.com/Bennyco86)*
+*Created by [Benny Cohen](https://github.com/Bennyco86)*
