@@ -1,85 +1,86 @@
+# Gandalf Modbus Wizard 🧙‍♂️
 
-# Gandalf Modbus Wizard
+[![Download](https://img.shields.io/badge/Download-v1.8-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software/1.8)
+[![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
-Gandalf Modbus Wizard is a comprehensive tool designed to facilitate the scanning and troubleshooting of Modbus TCP and Modbus RTU devices. It includes three main features: Modbus TCP Scanner, Auto Detection Wizard, and Modbus RTU Scanner.
+**Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices. 
 
-## Features
+*Designed by an engineer, for engineers—to take the guesswork out of serial communications.*
 
-### Modbus TCP Scanner
-This tool allows you to connect to a Modbus TCP device, read the registers, and display the values in various formats.
+---
 
-- **Host**: Select between 'localhost' or input the target IP address.
-- **Service Port**: Default is 502 but can be changed.
-- **Start and End Address**: Specify the address range to scan.
-- **Device ID**: Enter the Modbus device ID.
-- **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
-- **Polling Rate**: Adjust the rate in milliseconds.
-- **Combine Registers**: Option to combine two consecutive registers in either normal or reverse order.
-- **Write Registers**: Directly write to registers from the scanner interface.
+### ☕ Support the Project
+This tool is completely free to use. However, it takes significant personal time to develop and maintain. If this wizard helps you solve a tricky connection issue or saves you time in the field, please consider supporting the project!
 
-![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20TCP%20scanner.PNG)
-![Combined Normal TCP](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20normal.PNG)
-![Combined Reverse TCP](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse.PNG)
+[**☕ Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
 
-### Auto Detection Wizard
-This feature helps automatically detect the correct connection settings for your Modbus RTU device.
+---
 
-- **COM Port**: Select the appropriate COM port.
-- **Device ID Range**: Specify the range of device IDs to scan.
-- **Baud Rates, Parities, Data Bits, and Stop Bits**: Adjust these settings to match your device.
-- **Register Type and Range**: Choose the register type and range to scan.
+## 📺 Video Tutorial
+Watch the full guide on how to use the Auto Detection Wizard, Scanners, and Simulator:
+
+[![Gandalf Modbus Wizard Tutorial](https://img.youtube.com/vi/Xit_uzv_hek/0.jpg)](https://www.youtube.com/watch?v=Xit_uzv_hek)
+
+---
+
+## ✨ Features
+
+### 🔍 Auto Detection Wizard
+Stop guessing your connection settings. This feature brute-forces combinations to automatically detect the correct parameters for your Modbus RTU device.
+* **COM Port:** Select your target port.
+* **Scan Range:** Define the Device ID range to probe.
+* **Parameters:** Automatically cycles through Baud Rates, Parities, Data Bits, and Stop Bits.
 
 ![Auto Detection Wizard](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Gandalf.PNG)
 
-### Modbus RTU Scanner
-After establishing a connection with the Auto Detection Wizard, use this tool to scan and read the registers of your Modbus RTU device.
-
-- **COM Port**: Ensure the correct COM port is selected.
-- **Baud Rate, Parity, Data Bits, and Stop Bits**: These should be pre-selected after using the Auto Detection Wizard.
-- **Start and End Address**: Specify the register address range.
-- **Device ID**: Enter the Modbus device ID.
-- **Modbus Point Type**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
-- **Polling Rate**: Adjust the rate in milliseconds.
-- **Combine Registers**: Option to combine two consecutive registers in either normal or reverse order.
-- **Write Registers**: Directly write to registers from the scanner interface.
+### 🔌 Modbus RTU Scanner
+Once your connection is established, use the RTU Scanner to visualize data.
+* **Configuration:** Parameters are pre-loaded from the Auto Detection Wizard.
+* **Data Types:** Supports Coil Status, Input Status, Holding Registers, and Input Registers.
+* **Visuals:** Combine consecutive registers (Normal/Reverse) for 32-bit values.
+* **Control:** Write directly to registers from the interface.
 
 ![Modbus RTU Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20RTU%20scanner.PNG)
-![Modbus RTU Combined Registers - Normal](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.png)
-![Modbus RTU Combined Registers - Reverse](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20reverse%20rtu.png)
+![Modbus RTU Combined](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20rtu.png)
 
-### Modbus Simulation
-This feature allows you to simulate Modbus TCP and RTU devices.
+### 🌐 Modbus TCP Scanner
+Connect to and diagnose Modbus TCP devices over a network.
+* **Connection:** Support for Localhost or target IP addresses (Default Port 502).
+* **Flexibility:** Custom polling rates and Start/End address ranges.
+* **Data Formatting:** View combined registers in Normal or Reverse order.
 
-- **Simulation Type**: Choose between TCP or RTU.
-- **Host/Port**: For TCP simulation.
-- **COM Port/Baudrate/Stop Bits/Parity/Data Bits**: For RTU simulation.
-- **Function Code**: Choose from Coil Status, Input Status, Holding Registers, or Input Registers.
-- **Address Start/End**: Specify the address range to simulate.
-- **Device ID**: Enter the Modbus device ID.
+![Modbus TCP Scanner](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Modbus%20TCP%20scanner.PNG)
+![Combined Normal TCP](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/combined%20normal.PNG)
+
+### 🎮 Modbus Simulation
+Need to test a SCADA or HMI client? Spin up a virtual device instantly.
+* **Modes:** Supports both TCP and RTU simulation.
+* **Customization:** Define Function Codes, Address Ranges, and Device IDs.
+* **Simulation:** Generates valid Modbus responses for testing client applications.
 
 ![Modbus Simulation](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/blob/main/Simulation.PNG)
 
-## Getting Started
+---
 
-1. **Download the Tool**: Get the latest version from the [software folder](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software).
-2. **Run the Executable**: Extract the ZIP file and run `modbuswizard.exe`.
-3. **Read the Documentation**: Refer to the included `README.md` for detailed usage instructions.
+## 🚀 Getting Started
 
-## Support
+1.  **Download:** Get the latest version (v1.8) from the [**software folder**](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software/1.8).
+2.  **Run:** Extract the `.zip` file and launch `modbuswizard.exe`.
+3.  **Connect:** Use the Auto Detection tab to find your device, or jump straight to the Scanners if you know your settings.
 
-This program took me a long time to develop. If you like it, I'd appreciate your support!  
+> **⚠️ Important Notice:** > This software is not currently code-signed by Microsoft. Your antivirus or Windows SmartScreen may flag it as unrecognized. This is normal for open-source Python tools compiled with PyInstaller. You may need to select "Run Anyway" or whitelist the application.
+
+---
+
+## 🤝 Support & Contribution
+
+If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It motivates me to keep adding features and fixing bugs!
+
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
-## Contributing
+### Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the Gandalf Modbus Wizard License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Important Notice
-
-Please note that this software has not been signed yet, so your antivirus or Windows might flag it. I plan to have it signed in future releases, but I'm currently not familiar with the process.
-
-If you share this software, please credit Benny Cohen.
+### Credits & License
+If you share this software, please credit **Benny Cohen**.  
+This project is licensed under the Gandalf Modbus Wizard License - see [LICENSE.md](LICENSE.md) for details.
