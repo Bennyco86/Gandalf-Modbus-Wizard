@@ -1,6 +1,6 @@
 # Gandalf Modbus Wizard 🧙‍♂️
 
-[![Download](https://img.shields.io/badge/Download-v1.8-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software/1.8)
+[![Download](https://img.shields.io/badge/Download-v1.9-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/tree/main/software/1.9)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices. 
