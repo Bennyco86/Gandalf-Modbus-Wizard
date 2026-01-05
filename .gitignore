@@ -1,18 +1,22 @@
-# Python compile files
+# Python build artifacts (The 'dist' and 'build' folders in your screenshot)
 __pycache__/
-*.py[cod]
+build/
+dist/
+*.spec
+
+# Logs (The 'modbus_scan.log' files)
+*.log
+*.log.*
+
+# Video/Media (The 'Gandalf edditing' files)
+*.mp4
+*.veg
+*.veg.bak
+
+# Windows installers and icons (unless you specifically want to track the icon)
+*.exe
+*.iss
+Thumbs.db
 
 # Virtual Environments
-venv/
-env/
 .venv/
-
-# Environment variables (secrets)
-.env
-
-# Windows system files
-Thumbs.db
-Desktop.ini
-
-# IDE settings (VS Code)
-.vscode/

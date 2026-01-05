@@ -1,85 +1,142 @@
-Gandalf Modbus Wizard 🧙‍♂️ (Internal Dev Build)
-Gandalf Modbus Wizard is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
+# Gandalf Modbus Wizard 🧙‍♂️
 
-Designed by an engineer, for engineers—to take the guesswork out of serial communications.
+![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
-📝 Changelog: v1.9 (Developer Update)
-Reflects changes made during the source code backup session.
+[![Download](https://img.shields.io/badge/Download-v1.10-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10)
+[![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
-📦 Source Code Backup: Full Python source code committed to the repository (no longer just the compiled .exe).
+**Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
 
-📄 Dependency Tracking: Added requirements.txt to allow for single-command environment setup (pip install -r requirements.txt).
+*Designed by an engineer, for engineers—to take the guesswork out of serial communications.*
 
-🧹 Repository Hygiene: Added a standard Python .gitignore to exclude __pycache__, virtual environments, and system files.
+---
 
-🎨 Assets: Integrated GandalfModbusWizard_BMP.ico for application branding.
-
-🔧 Git Configuration: Fixed branch pointers and established main as the primary development branch.
-
-☕ Support the Project
+## ☕ Support the Project
 This tool is completely free to use. However, it takes significant personal time to develop and maintain. If this wizard helps you solve a tricky connection issue or saves you time in the field, please consider supporting the project!
 
-☕ Buy Me a Coffee
+[**☕ Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
 
-📺 Video Tutorial
-Watch the full guide on how to use the Auto Detection Wizard, Scanners, and Simulator:
+---
 
-✨ Features
-🔍 Auto Detection Wizard
+## 📺 Video Tutorial
+**📢 NOTE: New video tutorial featuring the Live Trend and v1.10 features is coming soon!**
+
+In the meantime, the core concepts from the previous version's guide still apply:
+
+[![Gandalf Modbus Wizard Tutorial](https://img.youtube.com/vi/Xit_uzv_hek/0.jpg)](https://www.youtube.com/watch?v=Xit_uzv_hek)
+
+---
+
+## ✨ Features
+
+### 📈 Live Trend Analysis (New!)
+Visualize your data in real-time to diagnose stability issues or tune loops.
+* **Real-time Graphing:** Select specific registers to plot values instantly.
+* **PID Tuning Helper:** Perfect for visualizing PV (Process Variable), SP (Setpoint), and OP (Output) simultaneously.
+* **Dynamic Theme:** Charts automatically adapt to Dark Mode.
+
+![Live Trend Analysis](Images/LiveTrend.jpg)
+
+---
+
+### 🔍 Auto Detection Wizard
 Stop guessing your connection settings. This feature brute-forces combinations to automatically detect the correct parameters for your Modbus RTU device.
+* **COM Port:** Select your target port.
+* **Scan Range:** Define the Device ID range to probe.
+* **Parameters:** Automatically cycles through Baud Rates, Parities, Data Bits, and Stop Bits.
 
-COM Port: Select your target port.
+![Auto Detection Wizard](Images/AutoDetect.jpg)
 
-Scan Range: Define the Device ID range to probe.
+---
 
-Parameters: Automatically cycles through Baud Rates, Parities, Data Bits, and Stop Bits.
-
-🔌 Modbus RTU Scanner
+### 🔌 Modbus RTU Scanner
 Once your connection is established, use the RTU Scanner to visualize data.
+* **Relaxed Timing:** Now supports **1.5 Stop Bits** for improved stability with Arduino/Embedded devices.
+* **Control:** Write directly to registers from the interface.
+* **Visuals:** Combine consecutive registers (Normal / Reverse) for 32-bit values.
 
-Configuration: Parameters are pre-loaded from the Auto Detection Wizard.
+![Modbus RTU Scanner](Images/RTUScanner.jpg)
 
-Data Types: Supports Coil Status, Input Status, Holding Registers, and Input Registers.
+*Connection Success details are now clearly visible:*
+![RTU Connection Success](Images/RTUConnect.jpg)
 
-Visuals: Combine consecutive registers (Normal/Reverse) for 32-bit values.
+---
 
-Control: Write directly to registers from the interface.
-
-🌐 Modbus TCP Scanner
+### 🌐 Modbus TCP Scanner
 Connect to and diagnose Modbus TCP devices over a network.
+* **Connection:** Localhost or target IP (Default Port 502).
+* **Flexibility:** Custom polling rates and Start / End address ranges.
+* **Data Formatting:** Combined registers in Normal or Reverse order.
 
-Connection: Support for Localhost or target IP addresses (Default Port 502).
+---
 
-Flexibility: Custom polling rates and Start/End address ranges.
-
-Data Formatting: View combined registers in Normal or Reverse order.
-
-🎮 Modbus Simulation
+### 🎮 Modbus Simulation
 Need to test a SCADA or HMI client? Spin up a virtual device instantly.
+* **Robust Engine:** Completely rewritten threaded engine to prevent stalls.
+* **Manual Overrides:** Writing to a register now "Locks" the value (indicated by `[LOCKED]`), preventing the auto-generator from overwriting your test data.
+* **Simulation:** Generates valid Modbus responses for client testing.
 
-Modes: Supports both TCP and RTU simulation.
+![Modbus Simulation Locked](Images/Simulation.jpg)
 
-Customization: Define Function Codes, Address Ranges, and Device IDs.
+---
 
-Simulation: Generates valid Modbus responses for testing client applications.
+## 🚀 What's New in Version 1.10
 
-🚀 Getting Started (Dev Mode)
-Clone: git clone https://github.com/Bennyco86/Gandalf-Private-Backup.git
+### Major Features
 
-Install Dependencies:
+📈 **Live Trend Graphing**
+Added a popup real-time chart. Select any rows in the scanner grid and click **"Trend Selected"** to visualize data over time. Essential for diagnosing intermittent sensor issues or PID loop behavior.
 
-Bash
+📊 **Excel Export with Charts**
+Export your scan history directly to an Excel file. The wizard now automatically generates a line chart for the first 15 registers in your log!
 
-pip install -r requirements.txt
-Run Source: Execute the main Python script (e.g., python main.py or similar).
+![Excel Export Chart](Images/ExcelExport.jpg)
 
-⚠️ Important Notice: This software is not currently code-signed by Microsoft. Your antivirus or Windows SmartScreen may flag compiled versions as unrecognized. This is normal for open-source Python tools compiled with PyInstaller.
+📦 **Full Windows Application**
+Gandalf has graduated to a standalone Windows Application. The installer handles all dependencies—no Python knowledge required.
 
-🤝 Support & Contribution
-If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It motivates me to keep adding features and fixing bugs!
+### Critical Fixes & Improvements
 
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+🛡️ **Simulation Race Condition Fix**
+Rewrote the Simulation Server to use **Thread Locking**. This eliminates the "Input/Output" error and application stall that occurred when writing values to the simulator during a scan.
 
-Credits & License
-If you share this software, please credit Benny Cohen. This project is licensed under the Gandalf Modbus Wizard License - see LICENSE.md for details.
+🔌 **RTU Stability Update**
+Added support for **1.5 Stop Bits** logic. This fixes framing errors and connection drops commonly seen with Arduino, ESP32, and other embedded Modbus slaves that have slight timing jitters.
+
+🌙 **Dynamic Dark Mode**
+The Live Trend charts now respect the global Dark Mode setting, switching to a dark background and white axis text automatically.
+
+---
+
+## 🚀 Getting Started
+
+### Option 1: Windows Installer (Recommended)
+
+1. **Download:**
+   Get the latest installer from the official release page:
+   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10
+
+2. **Install:**
+   Run `Gandalf_Wizard_Setup.exe` and follow the setup wizard.
+
+3. **Launch:**
+   Start Gandalf Modbus Wizard from the Desktop or Start Menu.
+
+---
+
+## 🤝 Support & Contribution
+
+If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It helps drive continued development and feature improvements.
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
+
+---
+
+### Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct and how to submit pull requests.
+
+---
+
+### Credits & License
+If you share this software, please credit **Benny Cohen**.
+This project is licensed under the **Gandalf Modbus Wizard License** – see [LICENSE.md](LICENSE.md) for details.

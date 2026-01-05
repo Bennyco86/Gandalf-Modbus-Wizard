@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+Why these specific libraries?
+pymodbus==2.5.3: Required because your code uses pymodbus.server.sync (which was removed in newer versions).
+
+pyserial: Needed for serial.tools.list_ports in your scanners.
+
+minimalmodbus: Your auto_detection_wizard.py relies heavily on this.
+
+Pillow: Used in GandalfModbusWizard.py to handle the .ico icon file.
+
+XlsxWriter: Used in modbus_scanner_base.py to export those nice Excel trend charts.
+
+pyinstaller: Needed to build the .exe.
+=======
+Why these specific libraries?
+pymodbus==2.5.3: Required because your code uses pymodbus.server.sync (which was removed in newer versions).
+
+pyserial: Needed for serial.tools.list_ports in your scanners.
+
+minimalmodbus: Your auto_detection_wizard.py relies heavily on this.
+
+Pillow: Used in GandalfModbusWizard.py to handle the .ico icon file.
+
+XlsxWriter: Used in modbus_scanner_base.py to export those nice Excel trend charts.
+
+pyinstaller: Needed to build the .exe.
+>>>>>>> 14f9a00 (Release v1.10: Added Live Trend Graphing, Fixed Simulation Race Conditions, and stabilized RTU timing.)
