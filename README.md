@@ -103,6 +103,9 @@ Rewrote the Simulation Server to use **Thread Locking**. This eliminates the "In
 🔌 **RTU Stability Update**
 Added support for **1.5 Stop Bits** logic. This fixes framing errors and connection drops commonly seen with Arduino, ESP32, and other embedded Modbus slaves that have slight timing jitters.
 
+✍️ **Float Value Support**
+Fixed an issue where writing Float values to registers was not parsing correctly. You can now write 32-bit floating point numbers to supported devices seamlessly.
+
 🌙 **Dynamic Dark Mode**
 The Live Trend charts now respect the global Dark Mode setting, switching to a dark background and white axis text automatically.
 
@@ -118,6 +121,8 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 
 2. **Install:**
    Run `Gandalf_Wizard_Setup.exe` and follow the setup wizard.
+   
+   ![Setup Preview](Images/Setup_Screenshot.jpg)
 
 3. **Launch:**
    Start Gandalf Modbus Wizard from the Desktop or Start Menu.
