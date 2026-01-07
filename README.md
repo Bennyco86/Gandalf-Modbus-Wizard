@@ -2,7 +2,7 @@
 
 ![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
-[![Download](https://img.shields.io/badge/Download-v1.10-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10)
+[![Download](https://img.shields.io/badge/Download-v1.11-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
@@ -19,7 +19,7 @@ This tool is completely free to use. However, it takes significant personal time
 ---
 
 ## 📺 Video Tutorial
-**📢 NOTE: New video tutorial featuring the Live Trend and v1.10 features is coming soon!**
+**📢 NOTE: New video tutorial featuring the latest UI + diagnostics (v1.11) is coming soon!**
 
 In the meantime, the core concepts from the previous version's guide still apply:
 
@@ -80,6 +80,30 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
+## 🚀 What's New in Version 1.11
+
+📌 **Release link (v1.11):**
+👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11
+
+### Major Features
+
+🎨 **Futuristic UI Overhaul**
+Migrated to a modern flat UI with a cleaner layout, smoother scaling, and a seamless **Dark/Light** theme.
+Also includes **DPI-aware** behavior for sharp rendering on high-DPI displays.
+
+📡 **New Network Diagnostics Tab**
+Built-in tools to help when you’re chasing comms issues:
+- **Traffic Monitor (Packet Sniffer):** view raw Modbus hex traffic in real-time with a high-performance rolling log
+- **CRC16 Calculator:** manually verify checksums for firmware/debugging work
+
+🔍 **Enhanced Auto-Detection**
+Improved algorithms for Arduino and embedded device boot timing quirks — faster and more reliable when trying to find that “lost” baud rate.
+
+💾 **Save Your Config**
+Save and load RTU connection settings to **JSON**, making it easy to swap between multiple field devices without re-entering parameters.
+
+---
+
 ## 🚀 What's New in Version 1.10
 
 ### Major Features
@@ -117,7 +141,7 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 
 1. **Download:**
    Get the latest installer from the official release page:
-   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10
+   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11
 
 2. **Install:**
    Run `Gandalf_Wizard_Setup.exe` and follow the setup wizard.
