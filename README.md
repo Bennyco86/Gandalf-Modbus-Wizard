@@ -2,10 +2,10 @@
 
 ![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
-[![Download](https://img.shields.io/badge/Download-v1.11-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11)
+[![Download](https://img.shields.io/badge/Download-v1.12-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
-**Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
+**Gandalf Modbus Wizard** is a free utility designed to help you scan, troubleshoot, and simulate **Modbus TCP** and **Modbus RTU** devices.
 
 *Designed by an engineer, for engineers—to take the guesswork out of serial communications.*
 
@@ -19,7 +19,7 @@ This tool is completely free to use. However, it takes significant personal time
 ---
 
 ## 📺 Video Tutorial
-**📢 NOTE: New video tutorial featuring the latest UI + diagnostics (v1.11) is coming soon!**
+**📢 NOTE: A new video tutorial featuring the latest UI + diagnostics + RTU-over-TCP (v1.12) is coming soon!**
 
 In the meantime, the core concepts from the previous version's guide still apply:
 
@@ -63,10 +63,11 @@ Once your connection is established, use the RTU Scanner to visualize data.
 ---
 
 ### 🌐 Modbus TCP Scanner
-Connect to and diagnose Modbus TCP devices over a network.
+Connect to and diagnose Modbus devices over a network.
 * **Connection:** Localhost or target IP (Default Port 502).
 * **Flexibility:** Custom polling rates and Start / End address ranges.
 * **Data Formatting:** Combined registers in Normal or Reverse order.
+* **RTU over TCP (RTU Tunnel):** For “transparent” gateways that tunnel RTU frames over a TCP socket (e.g., Waveshare-style setups).
 
 ---
 
@@ -77,6 +78,29 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 * **Simulation:** Generates valid Modbus responses for client testing.
 
 ![Modbus Simulation Locked](Images/Simulation.jpg)
+
+---
+
+## 🚀 What's New in Version 1.12
+
+📌 **Release link (v1.12):**
+👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
+
+### Highlights
+
+🔁 **RTU over TCP (RTU Tunnel)**
+Added **RTU-over-TCP** support to the **Modbus TCP Scanner** — useful for gateways that tunnel raw RTU frames through a TCP socket (often called *Transparent Mode*).
+- Full **scan + write** support
+- Works alongside standard **Modbus TCP (MBAP)** mode
+
+🎛️ **Transport / Framing Selector**
+The TCP Scanner now lets you choose:
+- **Modbus TCP (MBAP)**
+- **RTU over TCP (RTU Tunnel)**
+
+🧪 **Local Test Helper Included**
+Added an **RTU-over-TCP proxy helper** so you can test RTU-over-TCP locally using the built-in Modbus TCP simulator.
+- Includes a step-by-step guide: **RTU_OVER_TCP_TESTING.md**
 
 ---
 
@@ -109,7 +133,7 @@ Save and load RTU connection settings to **JSON**, making it easy to swap betwee
 ### Major Features
 
 📈 **Live Trend Graphing**
-Added a popup real-time chart. Select any rows in the scanner grid and click **"Trend Selected"** to visualize data over time. Essential for diagnosing intermittent sensor issues or PID loop behavior.
+Added a popup real-time chart. Select any rows in the scanner grid and click **"Trend Selected"** to visualize data over time. Handy for diagnosing intermittent sensor issues or PID loop behavior.
 
 📊 **Excel Export with Charts**
 Export your scan history directly to an Excel file. The wizard now automatically generates a line chart for the first 15 registers in your log!
@@ -119,7 +143,7 @@ Export your scan history directly to an Excel file. The wizard now automatically
 📦 **Full Windows Application**
 Gandalf has graduated to a standalone Windows Application. The installer handles all dependencies—no Python knowledge required.
 
-### Critical Fixes & Improvements
+### Fixes & Improvements
 
 🛡️ **Simulation Race Condition Fix**
 Rewrote the Simulation Server to use **Thread Locking**. This eliminates the "Input/Output" error and application stall that occurred when writing values to the simulator during a scan.
@@ -141,10 +165,10 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 
 1. **Download:**
    Get the latest installer from the official release page:
-   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11
+   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
 
 2. **Install:**
-   Run `Gandalf_Wizard_Setup.exe` and follow the setup wizard.
+   Run `Gandalf_Wizard_Setup_v1.12.exe` and follow the setup wizard.
    
    ![Setup Preview](Images/Setup_Screenshot.jpg)
 
