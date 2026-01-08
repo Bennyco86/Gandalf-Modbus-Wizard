@@ -11,6 +11,16 @@
 
 ---
 
+## 🐧 Big News — Linux Support (v1.12)
+Gandalf Modbus Wizard is now **officially supported on Linux** 🎉  
+Starting with **v1.12**, you can install it via a `.deb` package:
+
+- ✅ **Linux installer:** `gandalf-modbus-wizard_1.12_amd64.deb`
+- 📦 Download it from the **v1.12 Release** page:
+  👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
+
+---
+
 ## ☕ Support the Project
 This tool is completely free to use. However, it takes significant personal time to develop and maintain. If this wizard helps you solve a tricky connection issue or saves you time in the field, please consider supporting the project!
 
@@ -83,47 +93,51 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ## 🚀 What's New in Version 1.12
 
-📌 **Release link (v1.12):**
+📌 **Release link (v1.12):**  
 👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
 
 ### Highlights
 
-🔁 **RTU over TCP (RTU Tunnel)**
+🔁 **RTU over TCP (RTU Tunnel)**  
 Added **RTU-over-TCP** support to the **Modbus TCP Scanner** — useful for gateways that tunnel raw RTU frames through a TCP socket (often called *Transparent Mode*).
 - Full **scan + write** support
 - Works alongside standard **Modbus TCP (MBAP)** mode
 
-🎛️ **Transport / Framing Selector**
+🎛️ **Transport / Framing Selector**  
 The TCP Scanner now lets you choose:
 - **Modbus TCP (MBAP)**
 - **RTU over TCP (RTU Tunnel)**
 
-🧪 **Local Test Helper Included**
+🧪 **Local Test Helper Included**  
 Added an **RTU-over-TCP proxy helper** so you can test RTU-over-TCP locally using the built-in Modbus TCP simulator.
 - Includes a step-by-step guide: **RTU_OVER_TCP_TESTING.md**
+
+🐧 **Official Linux Support (New!)**  
+Gandalf now ships with a **Linux `.deb` installer**:
+- `gandalf-modbus-wizard_1.12_amd64.deb`
 
 ---
 
 ## 🚀 What's New in Version 1.11
 
-📌 **Release link (v1.11):**
+📌 **Release link (v1.11):**  
 👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.11
 
 ### Major Features
 
-🎨 **Futuristic UI Overhaul**
-Migrated to a modern flat UI with a cleaner layout, smoother scaling, and a seamless **Dark/Light** theme.
+🎨 **Futuristic UI Overhaul**  
+Migrated to a modern flat UI with a cleaner layout, smoother scaling, and a seamless **Dark/Light** theme.  
 Also includes **DPI-aware** behavior for sharp rendering on high-DPI displays.
 
-📡 **New Network Diagnostics Tab**
+📡 **New Network Diagnostics Tab**  
 Built-in tools to help when you’re chasing comms issues:
 - **Traffic Monitor (Packet Sniffer):** view raw Modbus hex traffic in real-time with a high-performance rolling log
 - **CRC16 Calculator:** manually verify checksums for firmware/debugging work
 
-🔍 **Enhanced Auto-Detection**
+🔍 **Enhanced Auto-Detection**  
 Improved algorithms for Arduino and embedded device boot timing quirks — faster and more reliable when trying to find that “lost” baud rate.
 
-💾 **Save Your Config**
+💾 **Save Your Config**  
 Save and load RTU connection settings to **JSON**, making it easy to swap between multiple field devices without re-entering parameters.
 
 ---
@@ -132,29 +146,29 @@ Save and load RTU connection settings to **JSON**, making it easy to swap betwee
 
 ### Major Features
 
-📈 **Live Trend Graphing**
+📈 **Live Trend Graphing**  
 Added a popup real-time chart. Select any rows in the scanner grid and click **"Trend Selected"** to visualize data over time. Handy for diagnosing intermittent sensor issues or PID loop behavior.
 
-📊 **Excel Export with Charts**
+📊 **Excel Export with Charts**  
 Export your scan history directly to an Excel file. The wizard now automatically generates a line chart for the first 15 registers in your log!
 
 ![Excel Export Chart](Images/ExcelExport.jpg)
 
-📦 **Full Windows Application**
+📦 **Full Windows Application**  
 Gandalf has graduated to a standalone Windows Application. The installer handles all dependencies—no Python knowledge required.
 
 ### Fixes & Improvements
 
-🛡️ **Simulation Race Condition Fix**
+🛡️ **Simulation Race Condition Fix**  
 Rewrote the Simulation Server to use **Thread Locking**. This eliminates the "Input/Output" error and application stall that occurred when writing values to the simulator during a scan.
 
-🔌 **RTU Stability Update**
+🔌 **RTU Stability Update**  
 Added support for **1.5 Stop Bits** logic. This fixes framing errors and connection drops commonly seen with Arduino, ESP32, and other embedded Modbus slaves that have slight timing jitters.
 
-✍️ **Float Value Support**
+✍️ **Float Value Support**  
 Fixed an issue where writing Float values to registers was not parsing correctly. You can now write 32-bit floating point numbers to supported devices seamlessly.
 
-🌙 **Dynamic Dark Mode**
+🌙 **Dynamic Dark Mode**  
 The Live Trend charts now respect the global Dark Mode setting, switching to a dark background and white axis text automatically.
 
 ---
@@ -163,17 +177,31 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 
 ### Option 1: Windows Installer (Recommended)
 
-1. **Download:**
-   Get the latest installer from the official release page:
+1. **Download:**  
+   Get the latest installer from the official release page:  
+   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
+
+2. **Install:**  
+   Run `Gandalf_Wizard_Setup_v1.12.exe` and follow the setup wizard.
+
+   ![Setup Preview](Images/Setup_Screenshot.jpg)
+
+3. **Launch:**  
+   Start Gandalf Modbus Wizard from the Desktop or Start Menu.
+
+---
+
+### Option 2: Linux (.deb)
+
+1. **Download:**  
+   Get `gandalf-modbus-wizard_1.12_amd64.deb` from:  
    👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12
 
 2. **Install:**
-   Run `Gandalf_Wizard_Setup_v1.12.exe` and follow the setup wizard.
-   
-   ![Setup Preview](Images/Setup_Screenshot.jpg)
-
-3. **Launch:**
-   Start Gandalf Modbus Wizard from the Desktop or Start Menu.
+```bash
+sudo dpkg -i gandalf-modbus-wizard_1.12_amd64.deb
+sudo apt-get -f install
+```
 
 ---
 
@@ -191,5 +219,5 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduc
 ---
 
 ### Credits & License
-If you share this software, please credit **Benny Cohen**.
+If you share this software, please credit **Benny Cohen**.  
 This project is licensed under the **Gandalf Modbus Wizard License** – see [LICENSE.md](LICENSE.md) for details.
