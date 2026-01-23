@@ -2,7 +2,7 @@
 
 ![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
-[![Download](https://img.shields.io/badge/Download-v1.10-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10)
+[![Download](https://img.shields.io/badge/Download-v1.12.2-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
@@ -19,7 +19,7 @@ This tool is completely free to use. However, it takes significant personal time
 ---
 
 ## 📺 Video Tutorial
-**📢 NOTE: New video tutorial featuring the Live Trend and v1.10 features is coming soon!**
+**📢 NOTE: New video tutorial featuring the latest UI + diagnostics (v1.12) is coming soon!**
 
 In the meantime, the core concepts from the previous version's guide still apply:
 
@@ -29,7 +29,7 @@ In the meantime, the core concepts from the previous version's guide still apply
 
 ## ✨ Features
 
-### 📈 Live Trend Analysis (New!)
+### 📈 Live Trend Analysis
 Visualize your data in real-time to diagnose stability issues or tune loops.
 * **Real-time Graphing:** Select specific registers to plot values instantly.
 * **PID Tuning Helper:** Perfect for visualizing PV (Process Variable), SP (Setpoint), and OP (Output) simultaneously.
@@ -80,34 +80,30 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## 🚀 What's New in Version 1.10
+## 🚀 What's New in Version 1.12.2
+
+**Release link:** https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2
+
+### Fixes & Updates
+*   🐧 **Linux Stability:** Fixed a crash on startup for Linux/WSL users caused by a missing Pillow/Tkinter dependency (`PIL._tkinter_finder`).
+*   📦 **Windows Installer:** Updated packaging to ensure all latest dependencies are bundled correctly.
+*   ✅ **Verified:** Live Trending feature verified working on both Windows and Linux.
+
+---
+
+## What's New in Version 1.12 (Previous)
 
 ### Major Features
+*   **RTU over TCP (RTU Tunnel):** Added support for RTU frames over TCP sockets (no MBAP header).
+*   **Proxy Helper:** Included `rtu_over_tcp_proxy.exe` for local testing.
 
-📈 **Live Trend Graphing**
-Added a popup real-time chart. Select any rows in the scanner grid and click **"Trend Selected"** to visualize data over time. Essential for diagnosing intermittent sensor issues or PID loop behavior.
+## What's New in Version 1.11 (Previous)
 
-📊 **Excel Export with Charts**
-Export your scan history directly to an Excel file. The wizard now automatically generates a line chart for the first 15 registers in your log!
-
-![Excel Export Chart](Images/ExcelExport.jpg)
-
-📦 **Full Windows Application**
-Gandalf has graduated to a standalone Windows Application. The installer handles all dependencies—no Python knowledge required.
-
-### Critical Fixes & Improvements
-
-🛡️ **Simulation Race Condition Fix**
-Rewrote the Simulation Server to use **Thread Locking**. This eliminates the "Input/Output" error and application stall that occurred when writing values to the simulator during a scan.
-
-🔌 **RTU Stability Update**
-Added support for **1.5 Stop Bits** logic. This fixes framing errors and connection drops commonly seen with Arduino, ESP32, and other embedded Modbus slaves that have slight timing jitters.
-
-✍️ **Float Value Support**
-Fixed an issue where writing Float values to registers was not parsing correctly. You can now write 32-bit floating point numbers to supported devices seamlessly.
-
-🌙 **Dynamic Dark Mode**
-The Live Trend charts now respect the global Dark Mode setting, switching to a dark background and white axis text automatically.
+### Major Features
+*   **UI Overhaul:** Modern flat UI, Dark/Light theme, DPI-aware.
+*   **Network Diagnostics:** Traffic Monitor and CRC16 Calculator.
+*   **Enhanced Auto-Detection:** Faster algorithms for embedded devices.
+*   **Save Config:** JSON save/load for RTU settings.
 
 ---
 
@@ -117,15 +113,29 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 
 1. **Download:**
    Get the latest installer from the official release page:
-   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.10
+   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2
 
 2. **Install:**
-   Run `Gandalf_Wizard_Setup.exe` and follow the setup wizard.
-   
+   Run `Gandalf_Wizard_Setup_v1.12.2.exe` and follow the setup wizard.
+
    ![Setup Preview](Images/Setup_Screenshot.jpg)
 
 3. **Launch:**
    Start Gandalf Modbus Wizard from the Desktop or Start Menu.
+
+### Option 2: Linux / WSL
+
+1. **Download:**
+   Get the `.deb` package from the release page.
+
+2. **Install:**
+   ```bash
+   sudo dpkg -i gandalf-modbus-wizard_1.12.2_amd64.deb
+   sudo apt-get install -f  # If dependencies are missing
+   ```
+
+3. **Launch:**
+   Run `gandalf-modbus-wizard` from your terminal or application launcher.
 
 ---
 
@@ -134,11 +144,6 @@ The Live Trend charts now respect the global Dark Mode setting, switching to a d
 If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It helps drive continued development and feature improvements.
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
-
----
-
-### Contributing
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct and how to submit pull requests.
 
 ---
 
