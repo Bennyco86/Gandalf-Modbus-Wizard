@@ -1,0 +1,23 @@
+{
+    "platform": "linux",
+    "geometry": "2048x906+249+141",
+    "dark_mode": true,
+    "tcp_last": {
+        "host": "127.0.0.1",
+        "port": "1502",
+        "unit": "1"
+    },
+    "rtu_last": {
+        "port": "COM6",
+        "baudrate": "115200",
+        "parity": "E",
+        "stopbits": "2.0",
+        "bytesize": "8",
+        "timeout": "1",
+        "start_addr": "1",
+        "end_addr": "110",
+        "unit": "1",
+        "poll": "50",
+        "batch": "1"
+    }
+}
