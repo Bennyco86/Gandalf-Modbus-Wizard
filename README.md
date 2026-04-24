@@ -1,25 +1,25 @@
-# Gandalf Modbus Wizard 🧙‍♂️
+﻿# Gandalf Modbus Wizard ðŸ§™â€â™‚ï¸
 
 ![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
-[![Download](https://img.shields.io/badge/Download-v1.12.2-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2)
+[![Download](https://img.shields.io/badge/Download-v1.13-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
 
-*Designed by an engineer, for engineers—to take the guesswork out of serial communications.*
+*Designed by an engineer, for engineersâ€”to take the guesswork out of serial communications.*
 
 ---
 
-## ☕ Support the Project
+## â˜• Support the Project
 This tool is completely free to use. However, it takes significant personal time to develop and maintain. If this wizard helps you solve a tricky connection issue or saves you time in the field, please consider supporting the project!
 
-[**☕ Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
+[**â˜• Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
 
 ---
 
-## 📺 Video Tutorial
-**📢 NOTE: New video tutorial featuring the latest UI + diagnostics (v1.12) is coming soon!**
+## ðŸ“º Video Tutorial
+**ðŸ“¢ NOTE: New video tutorial featuring the latest UI + diagnostics (v1.12) is coming soon!**
 
 In the meantime, the core concepts from the previous version's guide still apply:
 
@@ -27,9 +27,9 @@ In the meantime, the core concepts from the previous version's guide still apply
 
 ---
 
-## ✨ Features
+## âœ¨ Features
 
-### 📈 Live Trend Analysis
+### ðŸ“ˆ Live Trend Analysis
 Visualize your data in real-time to diagnose stability issues or tune loops.
 * **Real-time Graphing:** Select specific registers to plot values instantly.
 * **PID Tuning Helper:** Perfect for visualizing PV (Process Variable), SP (Setpoint), and OP (Output) simultaneously.
@@ -39,7 +39,7 @@ Visualize your data in real-time to diagnose stability issues or tune loops.
 
 ---
 
-### 🔍 Auto Detection Wizard
+### ðŸ” Auto Detection Wizard
 Stop guessing your connection settings. This feature brute-forces combinations to automatically detect the correct parameters for your Modbus RTU device.
 * **COM Port:** Select your target port.
 * **Scan Range:** Define the Device ID range to probe.
@@ -49,7 +49,7 @@ Stop guessing your connection settings. This feature brute-forces combinations t
 
 ---
 
-### 🔌 Modbus RTU Scanner
+### ðŸ”Œ Modbus RTU Scanner
 Once your connection is established, use the RTU Scanner to visualize data.
 * **Relaxed Timing:** Now supports **1.5 Stop Bits** for improved stability with Arduino/Embedded devices.
 * **Control:** Write directly to registers from the interface.
@@ -62,7 +62,7 @@ Once your connection is established, use the RTU Scanner to visualize data.
 
 ---
 
-### 🌐 Modbus TCP Scanner
+### ðŸŒ Modbus TCP Scanner
 Connect to and diagnose Modbus TCP devices over a network.
 * **Connection:** Localhost or target IP (Default Port 502).
 * **Flexibility:** Custom polling rates and Start / End address ranges.
@@ -70,7 +70,7 @@ Connect to and diagnose Modbus TCP devices over a network.
 
 ---
 
-### 🎮 Modbus Simulation
+### ðŸŽ® Modbus Simulation
 Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 * **Robust Engine:** Completely rewritten threaded engine to prevent stalls.
 * **Manual Overrides:** Writing to a register now "Locks" the value (indicated by `[LOCKED]`), preventing the auto-generator from overwriting your test data.
@@ -80,14 +80,26 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## 🚀 What's New in Version 1.12.2
+## What's New in Version 1.13
+
+**Release link:** https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13
+
+### Fixes & Improvements
+* **Float64 Excel Export:** Fixed export failure when scanned values contained `NaN` or `Inf`.
+* **Tab Readability:** Fixed small notebook tab font and stabilized tab sizing.
+* **Diagnostics Resource Use:** Network Diagnostics monitoring now starts OFF by default and runs only when enabled.
+* **Responsiveness:** Reduced UI lag when switching pages by skipping heavy redraw work on hidden tabs.
+* **Overall Stability:** Improved background update behavior during active scans and simulation.
+
+---
+## What's New in Version 1.12.2 (Previous)
 
 **Release link:** https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2
 
 ### Fixes & Updates
-*   🐧 **Linux Stability:** Fixed a crash on startup for Linux/WSL users caused by a missing Pillow/Tkinter dependency (`PIL._tkinter_finder`).
-*   📦 **Windows Installer:** Updated packaging to ensure all latest dependencies are bundled correctly.
-*   ✅ **Verified:** Live Trending feature verified working on both Windows and Linux.
+*   ðŸ§ **Linux Stability:** Fixed a crash on startup for Linux/WSL users caused by a missing Pillow/Tkinter dependency (`PIL._tkinter_finder`).
+*   ðŸ“¦ **Windows Installer:** Updated packaging to ensure all latest dependencies are bundled correctly.
+*   âœ… **Verified:** Live Trending feature verified working on both Windows and Linux.
 
 ---
 
@@ -107,16 +119,16 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Option 1: Windows Installer (Recommended)
 
 1. **Download:**
    Get the latest installer from the official release page:
-   👉 https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.12.2
+   ðŸ‘‰ https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13
 
 2. **Install:**
-   Run `Gandalf_Wizard_Setup_v1.12.2.exe` and follow the setup wizard.
+   Run `Gandalf_Wizard_Setup_v1.13.exe` and follow the setup wizard.
 
    ![Setup Preview](Images/Setup_Screenshot.jpg)
 
@@ -130,7 +142,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 2. **Install:**
    ```bash
-   sudo dpkg -i gandalf-modbus-wizard_1.12.2_amd64.deb
+   sudo dpkg -i gandalf-modbus-wizard_1.13_amd64.deb
    sudo apt-get install -f  # If dependencies are missing
    ```
 
@@ -139,7 +151,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## 🤝 Support & Contribution
+## ðŸ¤ Support & Contribution
 
 If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It helps drive continued development and feature improvements.
 
@@ -149,4 +161,6 @@ If you find value in Gandalf Modbus Wizard, your support is greatly appreciated.
 
 ### Credits & License
 If you share this software, please credit **Benny Cohen**.
-This project is licensed under the **Gandalf Modbus Wizard License** – see [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the **Gandalf Modbus Wizard License** â€“ see [LICENSE.md](LICENSE.md) for details.
+
+

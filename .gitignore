@@ -20,3 +20,17 @@ Thumbs.db
 
 # Virtual Environments
 .venv/
+.venv_fix/
+.venv_wsl/
+
+# Editor settings
+.vscode/
+
+# Local scratch and backups
+_tmp_issue3/
+backup/
+
+# Linux packaging outputs
+linux_build/
+linux_dist/
+linux_pkg/
