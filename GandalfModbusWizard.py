@@ -32,12 +32,25 @@ class GandalfModbusWizard(ctk.CTk):
     ICON_PNG_FILENAME = "gandalf-modbus-wizard-256.png"
     APP_ID = "BennyCohen.GandalfModbusWizard"
     VERSION = "1.13"
+    FANCY_COLORS = {
+        "space900": "#040B1A",
+        "space800": "#071126",
+        "space700": "#0D1B36",
+        "neon_purple": "#6D5BFF",
+        "plasma_purple": "#8865FF",
+        "neon_teal": "#33D6CC",
+        "aurora_teal": "#2AAFC2",
+        "frost50": "#EAF2FF",
+        "mist_lavender": "#0F1A34",
+        "outline": "#2A4E7F",
+    }
 
     def __init__(self):
         super().__init__()
         
         # Initialize state
-        self.dark_mode = False 
+        self.theme_mode = "light"
+        self._theme_var = tk.StringVar(value=self.theme_mode)
         
         # CTk Setup
         ctk.set_appearance_mode("Light")
@@ -63,7 +76,13 @@ class GandalfModbusWizard(ctk.CTk):
 
         # --- Menu Bar ---
         self.menubar = tk.Menu(self)
+        self.appearance_menu = tk.Menu(self.menubar, tearoff=False)
+        self.appearance_menu.add_radiobutton(label="Light", variable=self._theme_var, value="light", command=lambda: self.set_theme_mode("light"))
+        self.appearance_menu.add_radiobutton(label="Dark", variable=self._theme_var, value="dark", command=lambda: self.set_theme_mode("dark"))
+        self.appearance_menu.add_radiobutton(label="Fancy (Android Colors)", variable=self._theme_var, value="fancy", command=lambda: self.set_theme_mode("fancy"))
+        self.menubar.add_cascade(label="Appearance", menu=self.appearance_menu)
         self.menubar.add_command(label="Toggle Appearance (Light/Dark)", command=self.toggle_theme)
+        self.menubar.add_command(label="Cycle Appearance", command=self.cycle_theme_mode)
         self.config(menu=self.menubar)
 
         # Sync TTK styles with the current appearance.
@@ -303,7 +322,31 @@ class GandalfModbusWizard(ctk.CTk):
         # Keep tab text/padding explicit so OS theme changes do not shrink labels.
         tab_font = ("Segoe UI", 11, "bold")
         tab_padding = (12, 6)
-        if self.dark_mode:
+        if self.theme_mode == "fancy":
+            c = self.FANCY_COLORS
+            style.theme_use('clam')
+            style.configure("TNotebook", background=c["space900"], borderwidth=0)
+            style.configure(
+                "TNotebook.Tab",
+                background=c["mist_lavender"],
+                foreground=c["frost50"],
+                borderwidth=0,
+                font=tab_font,
+                padding=tab_padding,
+            )
+            style.map(
+                "TNotebook.Tab",
+                background=[("selected", c["neon_purple"]), ("active", c["plasma_purple"])],
+                foreground=[("selected", c["frost50"]), ("active", c["frost50"])],
+            )
+            style.configure("Treeview", background=c["space800"], fieldbackground=c["space800"], foreground=c["frost50"], bordercolor=c["outline"])
+            style.map("Treeview", background=[("selected", c["aurora_teal"])], foreground=[("selected", c["space900"])])
+            style.configure("Treeview.Heading", background=c["mist_lavender"], foreground=c["frost50"], borderwidth=0)
+            try:
+                self.configure(fg_color=c["space900"])
+            except Exception:
+                pass
+        elif self.theme_mode == "dark":
             style.theme_use('clam')
             style.configure("TNotebook", background="#2b2b2b", borderwidth=0)
             style.configure(
@@ -317,6 +360,10 @@ class GandalfModbusWizard(ctk.CTk):
             style.map("TNotebook.Tab", background=[("selected", "#1f6aa5")], foreground=[("selected", "white")])
             style.configure("Treeview", background="#2b2b2b", fieldbackground="#2b2b2b", foreground="white")
             style.map("Treeview", background=[("selected", "#1f6aa5")], foreground=[("selected", "white")])
+            try:
+                self.configure(fg_color=("gray92", "gray14"))
+            except Exception:
+                pass
         else:
             style.theme_use('default')
             style.configure("TNotebook", background="#f0f0f0", borderwidth=0)
@@ -331,25 +378,54 @@ class GandalfModbusWizard(ctk.CTk):
             style.map("TNotebook.Tab", background=[("selected", "#ffffff")], foreground=[("selected", "black")])
             style.configure("Treeview", background="white", fieldbackground="white", foreground="black")
             style.map("Treeview", background=[("selected", "#1f6aa5")], foreground=[("selected", "white")])
+            try:
+                self.configure(fg_color=("gray92", "gray14"))
+            except Exception:
+                pass
 
-    def toggle_theme(self):
-        self.dark_mode = not self.dark_mode
-        mode = "Dark" if self.dark_mode else "Light"
-        ctk.set_appearance_mode(mode)
+    def _is_dark_visual_mode(self) -> bool:
+        return self.theme_mode in ("dark", "fancy")
+
+    def set_theme_mode(self, mode: str):
+        mode = str(mode or "light").strip().lower()
+        if mode not in ("light", "dark", "fancy"):
+            mode = "light"
+        self.theme_mode = mode
+        self._theme_var.set(mode)
+
+        ctk_mode = "Dark" if self._is_dark_visual_mode() else "Light"
+        ctk.set_appearance_mode(ctk_mode)
         self._apply_ttk_theme()
 
+        dark_visual = self._is_dark_visual_mode()
+
         # Force update on Simulation tab (if it has custom logic)
-        if self.simulation:
-            self.simulation.apply_theme(self.dark_mode)
+        if getattr(self, "simulation", None):
+            self.simulation.apply_theme(dark_visual)
 
         # DYNAMIC TREND UPDATE
-        for session in self.tcp_sessions:
+        for session in getattr(self, "tcp_sessions", []):
             scanner = session.get("scanner")
             if scanner and scanner.trend_popup and scanner.trend_popup.is_open:
-                scanner.trend_popup.set_theme(self.dark_mode)
-        for scanner in self.rtu_sessions:
+                scanner.trend_popup.set_theme(dark_visual)
+        for scanner in getattr(self, "rtu_sessions", []):
             if scanner and scanner.trend_popup and scanner.trend_popup.is_open:
-                scanner.trend_popup.set_theme(self.dark_mode)
+                scanner.trend_popup.set_theme(dark_visual)
+
+    def toggle_theme(self):
+        # Legacy behavior: toggle only between Light and Dark.
+        if self.theme_mode == "light":
+            self.set_theme_mode("dark")
+        else:
+            self.set_theme_mode("light")
+
+    def cycle_theme_mode(self):
+        modes = ("light", "dark", "fancy")
+        try:
+            idx = modes.index(self.theme_mode)
+        except ValueError:
+            idx = 0
+        self.set_theme_mode(modes[(idx + 1) % len(modes)])
 
     # --- TCP Logic ---
     def _next_tcp_id(self) -> int:
@@ -486,9 +562,10 @@ class GandalfModbusWizard(ctk.CTk):
             if "geometry" in config:
                 self.geometry(config["geometry"])
             
-            desired_dark = bool(config.get("dark_mode", False))
-            if desired_dark != self.dark_mode:
-                self.toggle_theme()
+            desired_mode = str(config.get("theme_mode", "")).strip().lower()
+            if desired_mode not in ("light", "dark", "fancy"):
+                desired_mode = "dark" if bool(config.get("dark_mode", False)) else "light"
+            self.set_theme_mode(desired_mode)
 
             # 3. Restore TCP Settings (for the first tab)
             if "tcp_last" in config and self.tcp_sessions:
@@ -525,8 +602,9 @@ class GandalfModbusWizard(ctk.CTk):
         # 1. Window Geometry
         config["geometry"] = self.geometry()
         
-        # 2. Dark Mode
-        config["dark_mode"] = self.dark_mode
+        # 2. Theme Mode (legacy dark_mode kept for compatibility)
+        config["theme_mode"] = self.theme_mode
+        config["dark_mode"] = self._is_dark_visual_mode()
 
         # 3. TCP Snapshot (First Session)
         if self.tcp_sessions:
