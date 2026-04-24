@@ -1,4 +1,4 @@
-﻿# Gandalf Modbus Wizard
+# Gandalf Modbus Wizard
 
 ![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
 
