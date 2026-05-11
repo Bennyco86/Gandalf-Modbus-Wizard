@@ -1,6 +1,6 @@
 # Gandalf Modbus Wizard 🧙‍♂️
 
-[![Download](https://img.shields.io/badge/Download-v1.13-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13)
+[![Download](https://img.shields.io/badge/Download-v1.13-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Wizard_Setup_v1.13.exe)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
@@ -80,7 +80,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ## What's New in Version 1.13
 
-**Release link:** https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13
+**Release link:** [Gandalf Modbus Wizard v1.13](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13)
 
 ### Fixes & Improvements
 * **Float64 Excel Export:** Fixed export failure when scanned values contained `NaN` or `Inf`.
@@ -122,7 +122,10 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 ### Option 1: Windows Installer (Recommended)
 
 1. **Download:**
-   Get the latest installer from the official release page:
+   Get the latest Windows installer:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Wizard_Setup_v1.13.exe
+
+   Release notes:
    https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13
 
 2. **Install:**
@@ -136,11 +139,12 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 ### Option 2: Linux / WSL
 
 1. **Download:**
-   Get the `.deb` package from the release page.
+   Get the latest Linux `.deb` package:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.12.2/gandalf-modbus-wizard_1.12.2_amd64.deb
 
 2. **Install:**
    ```bash
-   sudo dpkg -i gandalf-modbus-wizard_1.13_amd64.deb
+   sudo dpkg -i gandalf-modbus-wizard_1.12.2_amd64.deb
    sudo apt-get install -f  # If dependencies are missing
    ```
 
