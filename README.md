@@ -1,25 +1,23 @@
-# Gandalf Modbus Wizard
-
-![Gandalf Modbus Wizard Banner](Images/Banner.jpg)
+# Gandalf Modbus Wizard 🧙‍♂️
 
 [![Download](https://img.shields.io/badge/Download-v1.13-blue?style=for-the-badge&logo=github)](https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13)
 [![Buy Me A Coffee](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
 **Gandalf Modbus Wizard** is a comprehensive, free utility designed to facilitate the scanning, troubleshooting, and simulation of Modbus TCP and Modbus RTU devices.
 
-*Designed by an engineer, for engineers - to take the guesswork out of serial communications.*
+*Designed by an engineer, for engineers—to take the guesswork out of serial communications.*
 
 ---
 
-## Support the Project
+## ☕ Support the Project
 This tool is completely free to use. However, it takes significant personal time to develop and maintain. If this wizard helps you solve a tricky connection issue or saves you time in the field, please consider supporting the project!
 
-[**Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
+[**☕ Buy Me a Coffee**](https://buymeacoffee.com/bennycohen)
 
 ---
 
-## Video Tutorial
-**NOTE: New video tutorial featuring the latest UI + diagnostics (v1.12) is coming soon!**
+## 📺 Video Tutorial
+**📢 NOTE: New video tutorial featuring the latest UI + diagnostics (v1.12) is coming soon!**
 
 In the meantime, the core concepts from the previous version's guide still apply:
 
@@ -27,9 +25,9 @@ In the meantime, the core concepts from the previous version's guide still apply
 
 ---
 
-## Features
+## ✨ Features
 
-### Live Trend Analysis
+### 📈 Live Trend Analysis
 Visualize your data in real-time to diagnose stability issues or tune loops.
 * **Real-time Graphing:** Select specific registers to plot values instantly.
 * **PID Tuning Helper:** Perfect for visualizing PV (Process Variable), SP (Setpoint), and OP (Output) simultaneously.
@@ -39,7 +37,7 @@ Visualize your data in real-time to diagnose stability issues or tune loops.
 
 ---
 
-### Auto Detection Wizard
+### 🔍 Auto Detection Wizard
 Stop guessing your connection settings. This feature brute-forces combinations to automatically detect the correct parameters for your Modbus RTU device.
 * **COM Port:** Select your target port.
 * **Scan Range:** Define the Device ID range to probe.
@@ -49,7 +47,7 @@ Stop guessing your connection settings. This feature brute-forces combinations t
 
 ---
 
-### Modbus RTU Scanner
+### 🔌 Modbus RTU Scanner
 Once your connection is established, use the RTU Scanner to visualize data.
 * **Relaxed Timing:** Now supports **1.5 Stop Bits** for improved stability with Arduino/Embedded devices.
 * **Control:** Write directly to registers from the interface.
@@ -62,7 +60,7 @@ Once your connection is established, use the RTU Scanner to visualize data.
 
 ---
 
-### Modbus TCP Scanner
+### 🌐 Modbus TCP Scanner
 Connect to and diagnose Modbus TCP devices over a network.
 * **Connection:** Localhost or target IP (Default Port 502).
 * **Flexibility:** Custom polling rates and Start / End address ranges.
@@ -70,7 +68,7 @@ Connect to and diagnose Modbus TCP devices over a network.
 
 ---
 
-### Modbus Simulation
+### 🎮 Modbus Simulation
 Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 * **Robust Engine:** Completely rewritten threaded engine to prevent stalls.
 * **Manual Overrides:** Writing to a register now "Locks" the value (indicated by `[LOCKED]`), preventing the auto-generator from overwriting your test data.
@@ -119,7 +117,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Option 1: Windows Installer (Recommended)
 
@@ -151,66 +149,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 ---
 
-## Build Folder Guide (Windows / Linux)
-
-Use this section when deciding what to keep in the repo root.
-
-### Required for source + build
-
-Keep these files/folders:
-
-- Python source files: `GandalfModbusWizard.py`, `modbus_*.py`, `ModbusSimulation.py`, `diagnostics_tab.py`, `auto_detection_wizard.py`, `live_trend_popup.py`, `rtu_over_tcp_proxy.py`
-- Build files: `GandalfModbusWizard.spec`, `Gandalf_Installer.iss`
-- Assets used by app/packaging: `GandalfModbusWizard_BMP.ico`, `gandalf-modbus-wizard-256.png`, `gandalf-modbus-wizard.png`, `Images/`
-- Config/docs/license: `gandalf_config.json`, `README.md`, `GandalfLinux.md`, `license.txt`, `version1-12.md`, `version1-13.md`, `RTU_OVER_TCP_TESTING.md`
-- Dependency notes: `requirements.txt`
-
-### Generated or optional (safe to clean when not needed)
-
-- Build intermediates: `build/`, `linux_build/`, `__pycache__/`
-- Extra virtualenv copies: `.venv_fix/`, `.venv_wsl/` (keep one working venv only)
-- Runtime logs and local test captures: `modbus_scan.log*`, scratch media/screenshots
-- Release output folders are optional to keep in source:
-  - `dist/` (Windows EXE/installer output)
-  - `linux_dist/` (`.deb` and Linux binary output)
-  - `linux_pkg/` (Linux packaging workspace)
-
-### Quick build commands
-
-Windows:
-
-```powershell
-py -m pip install customtkinter pymodbus==2.5.3 pyserial minimalmodbus Pillow XlsxWriter matplotlib pyinstaller
-py -m PyInstaller --noconfirm GandalfModbusWizard.spec
-ISCC Gandalf_Installer.iss
-```
-
-Linux:
-
-```bash
-python3 -m pip install customtkinter pymodbus==2.5.3 pyserial minimalmodbus Pillow XlsxWriter matplotlib pyinstaller
-pyinstaller --noconfirm GandalfModbusWizard.spec
-# then package into .deb from your linux packaging workflow
-```
-
-### Cleanup Log (2026-04-24)
-
-Archived from this folder into:
-
-`D:\Downloads\gandalf_cleanup_archive_2026-04-24`
-
-Archived items:
-
-- `.venv_fix`, `.venv_wsl`, `build`, `linux_build`, `__pycache__`, `_tmp_issue3`
-- `Gandalf edditing.mp4`, `Gandalf edditing.veg`, `Gandalf edditing.veg.bak`
-- `Generated image 1.png`, `dev.jpg`, `Gandalf Linux.jpg`, `linux no icons.jpg`, `no serial port.jpg`
-- `weird UI behavior when opening the app half dark and half light, should just be full light when opening the app.jpg`
-- `modbus_scan.log`, `modbus_scan.log.1`, `modbus_scan.log.2`, `modbus_scan.log.3`, `modbus_scan.log.4`, `modbus_scan.log.5`
-- `Gandalf Modbus Wizard.spec`, `Codex.md`, `LINKEDIN_POST_DRAFT.md`
-
----
-
-## Support & Contribution
+## 🤝 Support & Contribution
 
 If you find value in Gandalf Modbus Wizard, your support is greatly appreciated. It helps drive continued development and feature improvements.
 
@@ -220,6 +159,6 @@ If you find value in Gandalf Modbus Wizard, your support is greatly appreciated.
 
 ### Credits & License
 If you share this software, please credit **Benny Cohen**.
-This project is licensed under the **Gandalf Modbus Wizard License** - see [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the **Gandalf Modbus Wizard License** included with the release packages.
 
 
