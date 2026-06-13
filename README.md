@@ -125,6 +125,9 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
    Get the latest Windows installer:
    https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Wizard_Setup_v1.13.exe
 
+   Optional RTU over TCP proxy helper:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/rtu_over_tcp_proxy.exe
+
    Release notes:
    https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/tag/v1.13
 
@@ -140,7 +143,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 1. **Download:**
    Get the latest Linux `.deb` package:
-   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.12.2/gandalf-modbus-wizard_1.12.2_amd64.deb
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/gandalf-modbus-wizard_1.12.2_amd64.deb
 
 2. **Install:**
    ```bash
