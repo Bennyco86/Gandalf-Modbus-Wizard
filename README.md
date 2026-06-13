@@ -88,6 +88,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 * **Diagnostics Resource Use:** Network Diagnostics monitoring now starts OFF by default and runs only when enabled.
 * **Responsiveness:** Reduced UI lag when switching pages by skipping heavy redraw work on hidden tabs.
 * **Overall Stability:** Improved background update behavior during active scans and simulation.
+* **macOS Build:** Added macOS `.dmg` and `.zip` downloads.
 
 ---
 ## What's New in Version 1.12.2 (Previous)
@@ -139,7 +140,22 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 3. **Launch:**
    Start Gandalf Modbus Wizard from the Desktop or Start Menu.
 
-### Option 2: Linux / WSL
+### Option 2: macOS
+
+1. **Download:**
+   Get the macOS `.dmg` package:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Modbus_Wizard_macOS_1.13.dmg
+
+   Alternative `.zip` package:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Modbus_Wizard_macOS_1.13.zip
+
+2. **Install:**
+   Open the `.dmg` and drag **Gandalf Modbus Wizard.app** to Applications.
+
+3. **Launch:**
+   If macOS blocks the first launch, right-click **Gandalf Modbus Wizard.app** and choose **Open**.
+
+### Option 3: Linux / WSL
 
 1. **Download:**
    Get the latest Linux `.deb` package:
