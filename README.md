@@ -89,6 +89,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 * **Responsiveness:** Reduced UI lag when switching pages by skipping heavy redraw work on hidden tabs.
 * **Overall Stability:** Improved background update behavior during active scans and simulation.
 * **macOS Build:** Added macOS `.dmg` and `.zip` downloads.
+* **Linux Portable Build:** Added a distro-agnostic x86_64 `.tar.gz` package for non-Debian Linux users.
 
 ---
 ## What's New in Version 1.12.2 (Previous)
@@ -158,16 +159,26 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 ### Option 3: Linux / WSL
 
 1. **Download:**
-   Get the latest Linux `.deb` package:
+   For non-Debian distros, get the portable Linux `.tar.gz` package:
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Modbus_Wizard_Linux_x86_64_1.13.tar.gz
+
+   For Debian/Ubuntu-based distros, get the `.deb` package:
    https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/gandalf-modbus-wizard_1.12.2_amd64.deb
 
-2. **Install:**
+2. **Portable tar.gz:**
+   ```bash
+   tar -xzf Gandalf_Modbus_Wizard_Linux_x86_64_1.13.tar.gz
+   cd Gandalf_Modbus_Wizard_Linux_x86_64_1.13
+   ./run-gandalf.sh
+   ```
+
+3. **Debian / Ubuntu install:**
    ```bash
    sudo dpkg -i gandalf-modbus-wizard_1.12.2_amd64.deb
    sudo apt-get install -f  # If dependencies are missing
    ```
 
-3. **Launch:**
+4. **Launch:**
    Run `gandalf-modbus-wizard` from your terminal or application launcher.
 
 ---
