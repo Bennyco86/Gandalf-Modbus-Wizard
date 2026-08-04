@@ -163,7 +163,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
    https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/Gandalf_Modbus_Wizard_Linux_x86_64_1.13.tar.gz
 
    For Debian/Ubuntu-based distros, get the `.deb` package:
-   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/gandalf-modbus-wizard_1.12.2_amd64.deb
+   https://github.com/Bennyco86/Gandalf-Modbus-Wizard/releases/download/v1.13/gandalf-modbus-wizard_1.13_amd64.deb
 
 2. **Portable tar.gz:**
    ```bash
@@ -174,7 +174,7 @@ Need to test a SCADA or HMI client? Spin up a virtual device instantly.
 
 3. **Debian / Ubuntu install:**
    ```bash
-   sudo dpkg -i gandalf-modbus-wizard_1.12.2_amd64.deb
+   sudo dpkg -i gandalf-modbus-wizard_1.13_amd64.deb
    sudo apt-get install -f  # If dependencies are missing
    ```
 
@@ -189,10 +189,13 @@ If you find value in Gandalf Modbus Wizard, your support is greatly appreciated.
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%23FFDD00.svg?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bennycohen)
 
+- [Support and issue reporting](SUPPORT.md)
+- [Privacy policy](PRIVACY.md)
+
 ---
 
 ### Credits & License
 If you share this software, please credit **Benny Cohen**.
-This project is licensed under the **Gandalf Modbus Wizard License** included with the release packages.
+This project is licensed under the **MIT License** - see [license.txt](license.txt) for details.
 
 
