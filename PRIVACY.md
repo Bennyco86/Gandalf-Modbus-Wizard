@@ -67,5 +67,5 @@ change. The current version will be published with the project documentation.
 
 For privacy questions, contact:
 
-- Email: `nzbennycohen@gmail.com`
+- Contact: [Aotearoa Labs](https://aotearoalabs.co.nz/)
 - Support: `https://github.com/Bennyco86/Gandalf-Modbus-Wizard/issues`

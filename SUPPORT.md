@@ -4,7 +4,7 @@ Gandalf Modbus Wizard support is provided through the public GitHub issue tracke
 
 `https://github.com/Bennyco86/Gandalf-Modbus-Wizard/issues`
 
-You can also contact the developer at `nzbennycohen@gmail.com`.
+You can also contact the developer through [Aotearoa Labs](https://aotearoalabs.co.nz/).
 
 ## Before Requesting Support
 
